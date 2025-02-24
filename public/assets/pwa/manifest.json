@@ -1,0 +1,41 @@
+{
+  "background_color": "#ffffff",
+  "description": "",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "LaCuna - 全てのカテゴリ",
+  "orientation": "portrait",
+  "scope": "/",
+  "short_name": "LaCuna",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://lacuna.me/public/assets/pwa/icone-180.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://lacuna.me/public/assets/pwa/icone-180.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://lacuna.me/public/assets/pwa/icone-180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "https://lacuna.me/public/assets/pwa/icone-32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "id": "lacuna",
+  "lang": "ja",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ]
+}
