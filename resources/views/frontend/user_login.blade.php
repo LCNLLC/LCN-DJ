@@ -20,7 +20,7 @@
                                         <div class="">
                                             <form class="form-default" role="form" action="{{ route('login') }}" method="POST">
                                                 @csrf
-                                                
+
                                                 <!-- Email or Phone -->
                                                 @if (addon_is_activated('otp_system'))
                                                     <div class="form-group phone-form-group mb-1">
@@ -29,7 +29,7 @@
                                                     </div>
 
                                                     <input type="hidden" name="country_code" value="">
-                                                    
+
                                                     <div class="form-group email-form-group mb-1 d-none">
                                                         <label for="email" class="fs-12 fw-700 text-soft-dark">{{  translate('Email') }}</label>
                                                         <input type="email" class="form-control rounded-0 {{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}" placeholder="{{  translate('johndoe@example.com') }}" name="email" id="email" autocomplete="off">
@@ -39,7 +39,7 @@
                                                             </span>
                                                         @endif
                                                     </div>
-                                                    
+
                                                     <div class="form-group text-right">
                                                         <button class="btn btn-link p-0 text-primary" type="button" onclick="toggleEmailPhone(this)"><i>*{{ translate('Use Email Instead') }}</i></button>
                                                     </div>
@@ -54,7 +54,7 @@
                                                         @endif
                                                     </div>
                                                 @endif
-                                                    
+
                                                 <!-- password -->
                                                 <div class="form-group">
                                                     <label for="password" class="fs-12 fw-700 text-soft-dark">{{  translate('Password') }}</label>
@@ -78,7 +78,7 @@
 
                                                 <!-- Submit Button -->
                                                 <div class="mb-4 mt-4">
-                                                    <button type="submit" class="btn btn-primary btn-block fw-700 fs-14 rounded-4">{{  translate('Login') }}</button>
+                                                    <button type="submit" class="btn btn-primary btn-block fw-700 fs-14 rounded-4" style="background: blue;">{{  translate('Login') }}</button>
                                                 </div>
                                             </form>
 
@@ -128,10 +128,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Right Side Image -->
                                 <div class="col-lg-6 col-md-5 py-3 py-md-0">
-                                    <img src="{{ uploaded_asset(get_setting('login_page_image')) }}" alt="" class="img-fit h-100">
+                                    <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?t=st=1740479622~exp=1740483222~hmac=6275f150bff797d2ff861b3c73bc3ded65f9b5e54cfec5ed2c66e9c9d1e41263&w=740" alt="" class="img-fit h-100">
                                 </div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@
             $('#email').val('customer@example.com');
             $('#password').val('123456');
         }
-        
+
         function autoFillDeliveryBoy(){
             $('#email').val('deliveryboy@example.com');
             $('#password').val('123456');
