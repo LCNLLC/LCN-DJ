@@ -1,7 +1,6 @@
 
 .idea
-/storage
-storage
-
+.env
+/.env
 /.zip
 .zip

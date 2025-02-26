@@ -1,0 +1,11 @@
+{
+    "except": [
+        "admin\/*"
+    ],
+    "redirect": null,
+    "retry": null,
+    "refresh": null,
+    "secret": null,
+    "status": 503,
+    "template": null
+}
