@@ -51,6 +51,7 @@ use App\Models\FlashDeal;
 use App\Models\Language;
 use App\Models\PreorderProduct;
 use App\Models\Tax;
+use App\Models\PaymentMethod;
 use App\Models\TaxValue;
 
 //function getParents($userid ){
@@ -1954,6 +1955,28 @@ if (!function_exists('renderStarRating')) {
         $html .= str_repeat($halfStar, $halfStarCount);
         $html .= str_repeat($emptyStar, $emptyStarCount);
         echo $html;
+    }
+}
+
+
+if (!function_exists('get_activate_payment_methods')) {
+    function get_activate_payment_methods()
+    {
+        $payment_methods = PaymentMethod::where('active', 1)
+                                        ->Where(function($query){
+                                            $query->whereNull('addon_identifier')
+                                            ->orWhere(function($q){
+                                                if(addon_is_activated('paytm')){
+                                                    $q->where('addon_identifier', 'paytm');
+                                                }
+                                            })
+                                            ->orWhere(function($q){
+                                                if(addon_is_activated('african_pg')){
+                                                    $q->where('addon_identifier', 'african_pg');
+                                                }
+                                            });
+                                        });
+        return $payment_methods->get();
     }
 }
 

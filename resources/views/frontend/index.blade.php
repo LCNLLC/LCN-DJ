@@ -284,7 +284,7 @@
             <!-- Header & View All -->
             <div class="japan-theme-deals-header d-flex align-items-center justify-content-between my-3">
                 <h3 class="japan-theme-deals-title fs-20 fw-bold text-black mb-0">
-                    <span>{{ translate('Deals and Discounts') }}</span>
+                    <span>{{ translate('Top Sellers Products') }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24" class="ml-3">
                         <path id="Path_28795" data-name="Path 28795"
                               d="M30.953,13.695a.474.474,0,0,0-.424-.25h-4.9l3.917-7.81a.423.423,0,0,0-.028-.428.477.477,0,0,0-.4-.207H21.588a.473.473,0,0,0-.429.263L15.041,18.151a.423.423,0,0,0,.034.423.478.478,0,0,0,.4.2h4.593l-2.229,9.683a.438.438,0,0,0,.259.5.489.489,0,0,0,.571-.127L30.9,14.164a.425.425,0,0,0,.054-.469Z"

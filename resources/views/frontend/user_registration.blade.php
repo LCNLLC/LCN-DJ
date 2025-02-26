@@ -131,7 +131,7 @@
 
                                                 <!-- Submit Button -->
                                                 <div class="mb-4 mt-4">
-                                                    <button type="submit" class="btn btn-primary btn-block fw-600 rounded-4">{{  translate('Create Account') }}</button>
+                                                    <button type="submit" class="btn btn-primary btn-block fw-600 rounded-4" style="background: blue;">{{  translate('Create Account') }}</button>
                                                 </div>
                                             </form>
 
@@ -207,7 +207,7 @@
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!";
         const passwordLength = 8; // Set the desired password length
         let password = "";
-    
+
         for (let i = 0; i < passwordLength; i++) {
             const randomIndex = Math.floor(Math.random() * chars.length);
             password += chars[randomIndex];

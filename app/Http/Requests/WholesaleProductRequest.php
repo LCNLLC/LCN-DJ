@@ -61,7 +61,6 @@ class WholesaleProductRequest extends FormRequest
     {
 
         $rules = [];
-
         $rules['name']                = 'required|max:255';
         $rules['slug']                = ['required', 'max:255', Rule::unique('products')->ignore($this->id)];
         $rules['category_ids']        = 'required';

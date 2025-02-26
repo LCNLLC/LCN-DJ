@@ -15,6 +15,7 @@ use Cache;
 
 class SellerController extends Controller
 {
+    dd('hello');
     public function __construct() {
         // Staff Permission Check
         $this->middleware(['permission:view_all_seller'])->only('index');
@@ -33,28 +34,29 @@ class SellerController extends Controller
      */
     public function index(Request $request)
     {
-        $sort_search = null;
-        $approved = null;
-        $shops = Shop::whereIn('user_id', function ($query) {
-                       $query->select('id')
-                       ->from(with(new User)->getTable())
-                       ->where('user_type', 'seller');
-                    })->latest();
 
-        if ($request->has('search')) {
-            $sort_search = $request->search;
-            $user_ids = User::where('user_type', 'seller')->where(function ($user) use ($sort_search) {
-                $user->where('name', 'like', '%' . $sort_search . '%')->orWhere('email', 'like', '%' . $sort_search . '%');
-            })->pluck('id')->toArray();
-            $shops = $shops->where(function ($shops) use ($user_ids) {
-                $shops->whereIn('user_id', $user_ids);
-            });
-        }
-        if ($request->approved_status != null) {
-            $approved = $request->approved_status;
-            $shops = $shops->where('verification_status', $approved);
-        }
-        $shops = $shops->paginate(15);
+        // $sort_search = null;
+        // $approved = null;
+        // $shops = Shop::whereIn('user_id', function ($query) {
+        //                $query->select('id')
+        //                ->from(with(new User)->getTable())
+        //                ->where('user_type', 'seller');
+        //             })->latest();
+
+        // if ($request->has('search')) {
+        //     $sort_search = $request->search;
+        //     $user_ids = User::where('user_type', 'seller')->where(function ($user) use ($sort_search) {
+        //         $user->where('name', 'like', '%' . $sort_search . '%')->orWhere('email', 'like', '%' . $sort_search . '%');
+        //     })->pluck('id')->toArray();
+        //     $shops = $shops->where(function ($shops) use ($user_ids) {
+        //         $shops->whereIn('user_id', $user_ids);
+        //     });
+        // }
+        // if ($request->approved_status != null) {
+        //     $approved = $request->approved_status;
+        //     $shops = $shops->where('verification_status', $approved);
+        // }
+        // $shops = $shops->paginate(15);
         return view('backend.sellers.index', compact('shops', 'sort_search', 'approved'));
     }
 

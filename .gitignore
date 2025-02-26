@@ -4,3 +4,5 @@
 /.env
 /.zip
 .zip
+/storage
+storage

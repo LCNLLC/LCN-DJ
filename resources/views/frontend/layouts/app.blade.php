@@ -124,9 +124,9 @@
             --soft-white: #b5b5bf;
             --dark: #292933;
             --soft-dark: #1b1b28;
-            --primary: '#06D6A0' !important;
-            --hov-primary: '#06D6A0' !important;
-            --soft-primary: '#06D6A0' !important;
+            --primary: {{ get_setting('base_color', '#06D6A0') }};
+            --hov-primary: {{ get_setting('base_hov_color', '#06D6A0') }};
+            --soft-primary: {{ hex2rgba(get_setting('base_color','#06D6A0'),.15) }};
         }
         body{
             font-family: 'Public Sans', sans-serif;

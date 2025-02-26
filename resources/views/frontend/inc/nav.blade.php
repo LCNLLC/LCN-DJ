@@ -105,17 +105,17 @@
                         </li>
                         <li class="list-inline-item border-right px-3">
                             <a href="{{ route('seller.login') }}" class="text-white fs-13">
-                                {{ translate('Seller Login')}}
+                                {{ translate('Login to Seller')}}
                             </a>
                         </li>
                         <li class="list-inline-item border-right px-3">
                             <a href="{{ route('couriers.create') }}" class="text-white fs-13">
-                                {{ translate('Become a Courier!')}}
+                                {{ translate('Become a Courier !')}}
                             </a>
                         </li>
                         <li class="list-inline-item px-3">
                             <a href="{{ route('courier.login') }}" class="text-white fs-13">
-                                {{ translate('Courier Login')}}
+                                {{ translate('Login to Courier')}}
                             </a>
                         </li>
                     @endif

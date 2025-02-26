@@ -192,11 +192,11 @@ class WholesaleProductController extends Controller
      */
     public function product_store_admin(WholesaleProductRequest $request)
     {
+
         $product = (new WholesaleService)->store($request->except([
             '_token', 'button', 'flat_shipping_cost', 'tax_id', 'tax', 'tax_type', 'flash_deal_id', 'flash_discount', 'flash_discount_type'
         ]));
         $request->merge(['product_id' => $product->id]);
-
         //Product categories
         $product->categories()->attach($request->category_ids);
 
